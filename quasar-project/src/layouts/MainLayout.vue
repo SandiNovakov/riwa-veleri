@@ -4,7 +4,7 @@
       <q-toolbar>
         <q-btn flat dense round icon="menu" aria-label="Menu" @click="toggleLeftDrawer" />
 
-        <q-toolbar-title> Quasar App nez </q-toolbar-title>
+        <q-toolbar-title class="text-h1" style="color: blue"> Novi projekat </q-toolbar-title>
 
         <div>Quasar v{{ $q.version }}</div>
       </q-toolbar>
@@ -74,7 +74,7 @@ const linksList = [
   {
     title: 'Katalizatori',
     caption: 'Prodaja katalizatora d.o.o.',
-    icon: 'money',
+    icon: 'Directions-Car',
     link: 'https://retromakina.net/katalizatori/',
   },
   {
@@ -82,6 +82,12 @@ const linksList = [
     caption: 'riwa-veleri',
     icon: 'code',
     link: 'https://github.com/SandiNovakov/riwa-veleri',
+  },
+  {
+    title: 'VeleRi',
+    caption: 'Veleučilište u Rijeci',
+    icon: 'school',
+    link: 'https://www.veleri.hr/hr',
   },
 ]
 

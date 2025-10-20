@@ -2,8 +2,8 @@
   <q-page class="flex flex-center">
     <img
       alt="Quasar logo"
-      src="~assets/quasar-logo-vertical.svg"
-      style="width: 200px; height: 200px"
+      src="~assets/Macaca_nigra_self-portrait_large.jpg"
+      width="100%"
     />
   </q-page>
 </template>
