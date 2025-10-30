@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
+  <q-layout view="hHh Lpr fFf">
     <q-header elevated>
       <q-toolbar>
         <q-btn flat dense round icon="menu" aria-label="Menu" @click="toggleLeftDrawer" />
@@ -30,66 +30,49 @@ import EssentialLink from 'components/EssentialLink.vue'
 
 const linksList = [
   {
-    title: 'Docs',
-    caption: 'quasar.dev',
-    icon: 'school',
-    link: 'https://quasar.dev',
+    "title": "Naslovnica",
+    "caption": "Početna stranica",
+    "icon": "home",
+    "link": "#/"
   },
   {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
-    icon: 'code',
-    link: 'https://github.com/quasarframework',
+    "title": "Nove knjige",
+    "caption": "Pregled novih knjiga",
+    "icon": "new_releases",
+    "link": "#/noveknjige"
   },
   {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
-    icon: 'chat',
-    link: 'https://chat.quasar.dev',
+    "title": "Popis svih knjiga",
+    "caption": "Sve knjige u knjižnici",
+    "icon": "menu_book",
+    "link": "#/popisknjiga"
   },
   {
-    title: 'Forum',
-    caption: 'forum.quasar.dev',
-    icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev',
+    "title": "Pretraživanje",
+    "caption": "Pretraži knjige",
+    "icon": "search",
+    "link": "#/pretrazivanje"
   },
   {
-    title: 'Twitter',
-    caption: '@quasarframework',
-    icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev',
+    "title": "Lokacija",
+    "caption": "Pronađi nas",
+    "icon": "place",
+    "link": "#/lokacija"
   },
   {
-    title: 'Facebook',
-    caption: '@QuasarFramework',
-    icon: 'public',
-    link: 'https://facebook.quasar.dev',
+    "title": "Login",
+    "caption": "Prijava korisnika",
+    "icon": "login",
+    "link": "#/login"
   },
   {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
-    icon: 'favorite',
-    link: 'https://awesome.quasar.dev',
-  },
-  {
-    title: 'Katalizatori',
-    caption: 'Prodaja katalizatora d.o.o.',
-    icon: 'Directions-Car',
-    link: 'https://retromakina.net/katalizatori/',
-  },
-  {
-    title: 'My Github',
-    caption: 'riwa-veleri',
-    icon: 'code',
-    link: 'https://github.com/SandiNovakov/riwa-veleri',
-  },
-  {
-    title: 'VeleRi',
-    caption: 'Veleučilište u Rijeci',
-    icon: 'school',
-    link: 'https://www.veleri.hr/hr',
-  },
+    "title": "Registracija",
+    "caption": "Stvori novi račun",
+    "icon": "person_add",
+    "link": "#/registracija"
+  }
 ]
+
 
 const leftDrawerOpen = ref(false)
 
