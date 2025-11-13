@@ -70,6 +70,12 @@ const linksList = [
     "caption": "Stvori novi račun",
     "icon": "person_add",
     "link": "#/registracija"
+  },
+  {
+    "title": "Unos novih knjiga",
+    "caption": "Unesi nove knjige",
+    "icon": "book",
+    "link": "#/unosnovihknjiga"
   }
 ]
 
