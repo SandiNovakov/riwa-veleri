@@ -1,0 +1,70 @@
+USE riwa;
+
+// 1. zadatak
+SELECT * FROM knjiga;
+    
+// 2. zadatak
+SELECT * FROM knjiga WHERE status = 'slobodna';
+
+// 3. zadatak
+PREPARE stmt FROM 'SELECT * FROM knjiga WHERE naslov = ?';
+SET @naslov = 'The Very Hungry Caterpillar';
+EXECUTE stmt USING @naslov;
+
+// 4.
+PREPARE stmt FROM 'SELECT * FROM knjiga WHERE autor = ?';
+SET @autor = 'Eric Carle';
+EXECUTE stmt USING @autor;
+
+// 5.
+SELECT * FROM korisnik;
+
+// 6.
+PREPARE stmt FROM 'SELECT * FROM korisnik WHERE korime = ?';
+SET @email = 'pero';
+EXECUTE stmt
+using@email;
+
+SELECT
+    *
+FROM
+    rezervacija;
+
+// 7.
+SELECT
+    knj.*,
+    rez.*,
+    kor.*
+FROM
+         knjiga knj
+    JOIN rezervacija rez ON knj.id = rez.knjiga
+    JOIN korisnik    kor ON rez.korisnik = kor.id;
+    
+// 8.
+SELECT
+    knj.*,
+    rez.*,
+    kor.*
+FROM
+         knjiga knj
+    JOIN rezervacija rez ON knj.id = rez.knjiga
+    JOIN korisnik    kor ON rez.korisnik = kor.id
+WHERE
+    rez.datum_vracanja IS NULL;
+
+// 9.
+SELECT
+    kor.*
+FROM
+    korisnik kor
+WHERE
+    EXISTS (
+        SELECT
+            'x'
+        FROM
+            rezervacija rez
+        WHERE
+                rez.korisnik = kor.id
+            AND rez.datum_rezervacije IS NOT NULL
+            AND rez.datum_vracanja IS NULL
+    );  
